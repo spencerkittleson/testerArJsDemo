@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="ka.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene
+      vr-mode-ui="enabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
+      embedded
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false"
+    >
+      <a-marker
+        markerhandler
+        id="animated-marker"
+        cursor="rayOrigin: mouse"
+        emitevents="true"
+        preset="custom"
+        type="pattern"
+        url="./pattern-kitchenaidBasic.patt"
+      >
+      <a-text
+      id="text-marker"
+        rotation="270 0 0"
+        color="red"
+        scale="2"
+        value="KitchenAid KCO275OB"
+      >
+        <!-- <a-box color="red"></a-box> -->
+
+        <!-- <a-image rotation="270 0 0" src="./logo.jpg"></a-image> -->
+
+
+        <!-- <a-link
+          href="https://producthelp.kitchenaid.com/Cooking/Wall_Ovens_and_Ranges/Electric_Ranges/Error_Codes/Error_Code%2C_Fault_Code_or_Message_-_Oven_Control/ES_or_E5/ES_or_E5_-_Electric_Range"
+          title="KitchenAid KCO275OB"
+          on="click"
+          rotation="270 0 0"
+          clicker
+        ></a-link> -->
+
+        <!-- <a-box position="0 0 1" material="color: red;"></a-box> -->
+        <!-- <a-link
+          href="https://producthelp.kitchenaid.com/Cooking/Wall_Ovens_and_Ranges/Electric_Ranges/Error_Codes/Error_Code%2C_Fault_Code_or_Message_-_Oven_Control/ES_or_E5/ES_or_E5_-_Electric_Range"
+          title="KitchenAid KCO275OB"
+          image="./logo.jpg"
+          on="alert('test');"
+        ></a-link> -->
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
