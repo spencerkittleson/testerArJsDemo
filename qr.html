@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>QR Reader</title>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script>
+      window.onload = function () {
+        var resultContainer = document.getElementById("qr-reader-results");
+        var lastResult,
+          countResults = 0;
+
+        function onScanSuccess(decodedText, decodedResult) {
+          if (decodedText !== lastResult) {
+            ++countResults;
+            lastResult = decodedText;
+            // Handle on success condition with the decoded message.
+            console.log(`Scan result ${decodedText}`, decodedResult);
+            window.location.href = decodedText;
+          }
+        }
+
+        var html5QrcodeScanner = new Html5QrcodeScanner("qr-reader", {
+          fps: 10,
+          qrbox: 250,
+        });
+        html5QrcodeScanner.render(onScanSuccess);
+      };
+    </script>
+  </head>
+  <body>
+    <p>No valid device found, please scan a device QR code.</p>
+    <div id="qr-reader" style="max-width: 1200px; width: 100%"></div>
+    <div id="qr-reader-results"></div>
+  </body>
+</html>

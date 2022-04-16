@@ -1,0 +1,52 @@
+body {
+  margin: 0px;
+  overflow: hidden;
+}
+.box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #232b32;
+  color: white;
+  padding: 1%;
+  /* min-height: 150px; */
+}
+
+.box > a, .box > a:visited {
+  color: white;
+}
+.box > br {
+  padding-top: 1%;
+}
+.box > h3 > b {
+  color: red;
+}
+.buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.say-hi-button {
+  padding: 0.25em;
+  border-radius: 4px;
+  border: none;
+  background: white;
+  color: black;
+  width: 4em;
+  height: 2em;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 50%;
+}

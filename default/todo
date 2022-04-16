@@ -1,0 +1,5 @@
+- Product lookup
+
+Flow
+- qr code read on side of device
+- url found. redirect to AR.js with docs
