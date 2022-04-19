@@ -4,6 +4,10 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <link rel="stylesheet" href="default.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
     <script>
        AFRAME.registerComponent('markerhandler', {
     init: function () {
@@ -17,40 +21,13 @@
   </head>
   <body>
     <img src="../logo.jpg" class="logo" alt="KitchenAid Logo" />
-    <div id="infoBox" class="box" hidden>
-      <h3>
-        <b>Product:</b>
-        <span id="deviceId">KitchenAid KCO275OB ConvectionOven</span>
-      </h3>
-      <h3><b>Size:</b> <span id="deviceSize">16.1 x 18 x 12.1 inches</span></h3>
-      <a
-        href="https://producthelp.kitchenaid.com/Product_Help_Page?model=KCO275OB"
-        style="color: white; font-size: larger"
-        >Troubleshooting❓</a
-      >
-    </div>
-    <!-- <a-scene embedded>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder
-        position="1 0.75 -3"
-        radius="0.5"
-        height="1.5"
-        color="#FFC65D"
-      ></a-cylinder>
-      <a-plane
-        position="0 0 -4"
-        rotation="-90 0 0"
-        width="4"
-        height="4"
-        color="#7BC8A4"
-      ></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene> -->
+    
+
     <a-scene
       renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false"
+      vr-mode-ui="enabled: false"
     >
       <a-assets>
         <a-asset-item
@@ -65,26 +42,18 @@
         emitevents="true"
         preset="custom"
         type="pattern"
-        url="./pattern-kitchenaidBasic.patt"
-      >
-      
-        
+        url="./pattern-kitchenaidBasic.patt">
       </a-marker>
-      <a-entity id="camera" camera>
-        
-        <!-- <a-entity
-          geometry="primitive: plane; height: 0.2; width: 0.5"
-          position="-0.5 0 -1"
-          material="color: black; opacity: 0.80"
-        >
-          <a-text
-
-            scale="0.1 0.1 0.1"
-            color="red"
-            value="KitchenAid KCO275OB ConvectionOven"
-          ></a-text> -->
-        </a-entity>
+      <a-entity id="camera" camera></a-entity>
       </a-entity>
     </a-scene>
+    <div id="infoBox" class="box" hidden>
+      <h3>
+        <b>Product:</b>
+        <span id="deviceId">KitchenAid KCO275OB ConvectionOven</span>
+      </h3>
+      <h3><b>Size:</b> <span id="deviceSize">16.1 x 18 x 12.1 inches</span></h3>
+      <a href="https://producthelp.kitchenaid.com/Product_Help_Page?model=KCO275OB" target="_blank">Troubleshooting❓</a>
+    </div>
   </body>
 </html>

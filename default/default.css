@@ -1,3 +1,7 @@
+body,
+p,h2,h3,b {
+  font-family: "Inconsolata";
+}
 body {
   margin: 0px;
   overflow: hidden;
@@ -10,10 +14,10 @@ body {
   background-color: #232b32;
   color: white;
   padding: 1%;
-  /* min-height: 150px; */
 }
 
-.box > a, .box > a:visited {
+.box > a,
+.box > a:visited {
   color: white;
 }
 .box > br {
