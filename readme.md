@@ -14,12 +14,15 @@ As an individual who is using the oven, I want to resolve the error message on s
 - Directed to AR app with product info on it.
 - Clicks on Troubleshooter. (See info). See animation?
 
+### Getting started guide
+
+air fryer
+
 ```graphviz
 digraph G {
   "No product info" -> "QR Reader app"
   "Product Docs" -> "Device AR/VR app"
   "QR Reader app" -> "Device AR/VR app"
-  "Scans QR Code" -> "Device AR/VR app"
   "Phone QR reader" -> "Device AR/VR app"
   "Device AR/VR app" -> "Troubleshooter Docs"
   "Device AR/VR app" -> "3D animation"
@@ -28,7 +31,6 @@ digraph G {
   "AR marker location to reset device" -> "Device AR/VR app"
 }
 ```
-
 
 ## Examples
 
